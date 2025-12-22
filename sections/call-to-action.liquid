@@ -1,0 +1,77 @@
+<div
+  class="call-to-action"
+  style="
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.container_y_padding }}px {{ section.settings.container_x_padding }}px;
+  "
+>
+  <!-- Your content here -->
+</div>
+
+{% schema %}
+{
+  "name": "Call to Action",
+  "class": "call-to-action-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#EAD4C9"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "container_x_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Container Horizontal Padding",
+      "default": 40,
+      "info": "Left and right padding for the content container"
+    },
+    {
+      "type": "range",
+      "id": "container_y_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Container Vertical Padding",
+      "default": 50,
+      "info": "Top and bottom padding for the content container"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action",
+      "settings": {
+        "background_color": "#EAD4C9",
+        "container_x_padding": 40,
+        "container_y_padding": 50,
+        "image_position": "right"
+      }
+    }
+  ]
+}
+{% endschema %}
