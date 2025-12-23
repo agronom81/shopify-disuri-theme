@@ -1,12 +1,61 @@
 <div
-  class="call-to-action"
+  class="cta-section"
   style="
-    background-color: {{ section.settings.background_color }};
-    padding: {{ section.settings.container_y_padding }}px {{ section.settings.container_x_padding }}px;
+    --cta-background-color: {{ section.settings.background_color }};
+    --padding: {{ section.settings.container_y_padding }}px {{ section.settings.container_x_padding }}px;
   "
 >
-  <!-- Your content here -->
+  <div class="cta-section__text">
+    {% if section.settings.sub_header != blank %}
+      <h3 class="cta-section__sub-header">{{ section.settings.sub_header }}</h3>
+    {% endif %}
+
+    {% if section.settings.header != blank %}
+      <h2 class="cta-section__header">{{ section.settings.header }}</h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <div class="cta-section__description">
+        {{ section.settings.description }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+      <a
+        href="{{ section.settings.button_link }}"
+        class="cta-section__button button"
+      >
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="cta-section__image"></div>
 </div>
+
+{% stylesheet %}
+  .cta-section {
+    background-color: var(--cta-background-color);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cta-section__text {
+    padding: var(--padding);
+    width: 55.31%;
+  }
+
+  .cta-section__sub-header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .cta-section__image {
+    width: 44.69%;
+    background-color: blueviolet;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -60,6 +109,35 @@
         }
       ],
       "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "sub_header",
+      "label": "Sub Header"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "product",
+      "id": "button_link",
+      "label": "Button Link"
     }
   ],
   "presets": [
@@ -69,7 +147,8 @@
         "background_color": "#EAD4C9",
         "container_x_padding": 40,
         "container_y_padding": 50,
-        "image_position": "right"
+        "image_position": "right",
+        "button_text": "BALL OUT"
       }
     }
   ]
