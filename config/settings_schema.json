@@ -376,24 +376,6 @@
         "label": "t:options.accent"
       },
       {
-        "type": "font_picker",
-        "id": "type_regular_font",
-        "default": "work_sans_n5",
-        "label": "Regular"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_semibold_font",
-        "default": "anonymous_pro_n4",
-        "label": "Semibold"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_bold_font",
-        "default": "anonymous_pro_n4",
-        "label": "Bold"
-      },
-      {
         "type": "header",
         "content": "t:content.text_presets"
       },

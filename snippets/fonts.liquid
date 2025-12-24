@@ -39,4 +39,35 @@
     fetchpriority="low"
   >
 {%- endunless -%}
+
+{%- unless settings.type_regular_font.system? -%}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ settings.type_regular_font | font_url }}"
+    type="font/woff2"
+    crossorigin
+    fetchpriority="low"
+  >
+{%- endunless -%}
+{%- unless settings.type_semibold_font.system? -%}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ settings.type_semibold_font | font_url }}"
+    type="font/woff2"
+    crossorigin
+    fetchpriority="low"
+  >
+{%- endunless -%}
+{%- unless settings.type_bold_font.system? -%}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ settings.type_bold_font | font_url }}"
+    type="font/woff2"
+    crossorigin
+    fetchpriority="low"
+  >
+{%- endunless -%}
 {% # theme-check-enable %}
