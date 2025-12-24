@@ -86,10 +86,24 @@
         "padding-block-end": 32
       }
     },
-    "collection_list_BEk7db": {
+    "divider_CdWTmW": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      }
+    },
+    "collection_list_dzAQ4A": {
       "type": "collection-list",
       "blocks": {
-        "group_8qridX": {
+        "group_raxiLz": {
           "type": "group",
           "name": "t:names.header",
           "settings": {
@@ -180,26 +194,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "spacer_ykhp6h": {
-              "type": "spacer",
-              "name": "t:names.spacer",
-              "settings": {
-                "size": "pixel",
-                "percent_size": 100,
-                "pixel_size": 16,
-                "custom_mobile_size": false,
-                "size_mobile": "percent",
-                "percent_size_mobile": 100,
-                "pixel_size_mobile": 120
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "text_cENELf",
-            "text_EiQTdJ",
-            "spacer_ykhp6h"
+            "text_EiQTdJ"
           ]
         },
         "static-collection-card": {
@@ -207,9 +206,9 @@
           "name": "t:names.collection_card",
           "static": true,
           "settings": {
-            "placement": "on_image",
+            "placement": "below_image",
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
+            "vertical_alignment": "center",
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
             "color_scheme": "",
@@ -219,14 +218,14 @@
             "border_radius": 0
           },
           "blocks": {
-            "collection_title_Mp7hz7": {
+            "collection_title_kg4KUQ": {
               "type": "collection-title",
               "name": "t:names.collection_title",
               "settings": {
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "h2",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -234,13 +233,13 @@
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
-                "background": true,
-                "background_color": "#ffffff",
+                "background": false,
+                "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 4,
-                "padding-block-end": 4,
-                "padding-inline-start": 8,
-                "padding-inline-end": 8
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -263,19 +262,19 @@
             }
           },
           "block_order": [
-            "collection_title_Mp7hz7"
+            "collection_title_kg4KUQ"
           ]
         }
       },
       "block_order": [
-        "group_8qridX"
+        "group_raxiLz"
       ],
-      "name": "t:names.collections_grid",
+      "name": "t:names.collections_editorial",
       "settings": {
         "collection_list": [
           "automated-collection",
-          "makeup",
           "hydrogen",
+          "makeup",
           "cheek"
         ],
         "layout_type": "grid",
@@ -290,7 +289,7 @@
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
-        "gap": 12,
+        "gap": 24,
         "color_scheme": "",
         "padding-block-start": 48,
         "padding-block-end": 48
@@ -301,6 +300,7 @@
     "main",
     "call_to_action_7hwGkc",
     "divider_6Niaaq",
-    "collection_list_BEk7db"
+    "divider_CdWTmW",
+    "collection_list_dzAQ4A"
   ]
 }
