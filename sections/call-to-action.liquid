@@ -18,41 +18,43 @@
   {% endcapture %}
 {%- endif -%}
 
-<div
-  class="cta-section cta-section_image-{{ image_position }}"
-  style="
-    --cta-background-color: {{ section.settings.background_color }};
-    --padding: {{ section.settings.container_y_padding }}px {{ section.settings.container_x_padding }}px;
-  "
->
-  <div class="cta-section__text">
-    {% if section.settings.sub_header != blank %}
-      <h3 class="cta-section__sub-header">{{ section.settings.sub_header }}</h3>
-    {% endif %}
+<div class="section">
+  <div
+    class="cta-section cta-section_image-{{ image_position }}"
+    style="
+      --cta-background-color: {{ section.settings.background_color }};
+      --padding: {{ section.settings.container_y_padding }}px {{ section.settings.container_x_padding }}px;
+    "
+  >
+    <div class="cta-section__text">
+      {% if section.settings.sub_header != blank %}
+        <h3 class="cta-section__sub-header">{{ section.settings.sub_header }}</h3>
+      {% endif %}
 
-    {% if section.settings.header != blank %}
-      <h2 class="cta-section__header">{{ section.settings.header }}</h2>
-    {% endif %}
+      {% if section.settings.header != blank %}
+        <h2 class="cta-section__header">{{ section.settings.header }}</h2>
+      {% endif %}
 
-    {% if section.settings.description != blank %}
-      <div class="cta-section__description">
-        {{ section.settings.description }}
-      </div>
-    {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="cta-section__description">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
 
-    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
-      <a
-        href="{{ section.settings.button_link }}"
-        class="cta-section__button button"
-      >
-        {{ section.settings.button_text }}
-      </a>
-    {% endif %}
-  </div>
-  <div class="cta-section__image">
-    {% if cta_image %}
-      {{ cta_image }}
-    {% endif %}
+      {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="cta-section__button button"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+    <div class="cta-section__image">
+      {% if cta_image %}
+        {{ cta_image }}
+      {% endif %}
+    </div>
   </div>
 </div>
 
